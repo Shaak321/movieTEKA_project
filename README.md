@@ -6,5 +6,5 @@
   
    Documentation consists of several links listed below, to ease the navigation.
   * Requirements
-    * [Functional](docs/functional_requirements.md)
-    * [Non-functional](doc/non_functional_requirements.md)
+    * [Functional](docs/functional_requirement.md)
+    * [Non-functional](docs/non_functional_requirement.md)
