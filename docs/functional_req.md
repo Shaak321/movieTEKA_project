@@ -23,4 +23,4 @@
 	*	Rate the movie
 
 
-#There is a global administrator on the website who can add movie to the database and make it buyable for everyone.
+###There is a global administrator on the website who can add movie to the database and make it buyable for everyone.
