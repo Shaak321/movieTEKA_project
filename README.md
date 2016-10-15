@@ -8,4 +8,3 @@
   * Requirements
     * [Functional](docs/functional_requirements.md)
     * [Non-functional](doc/non_functional_requirements.md)
-  * [Renderings](blank)
