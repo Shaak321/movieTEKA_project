@@ -10,8 +10,8 @@ class LoginController {
         const password = req.input('password')
 
         const loginMessage = {
-           success: 'Cooool! You are logged in',
-           error: 'Whooops... Wrong credentials'
+           success: 'Welcome',
+           error: 'Fail'
         }
         const authCheck = yield req.auth.attempt(username, password)
 

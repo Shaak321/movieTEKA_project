@@ -3,6 +3,7 @@
 const Validator = use('Validator')
 const User = use('App/Model/User')
 const Hash = use('Hash')
+const Database = use('Database')
 
 class UserController {
   * register(request, response) {
@@ -24,11 +25,11 @@ class UserController {
   }
 
   * doLogin (request, response) {
-    const email = request.input('email')
+    const username = request.input('username')
     const password = request.input('password')
 
     try {
-      const login = yield request.auth.attempt(email, password) 
+      const login = yield request.auth.attempt(username, password) 
 
       if (login) {
         response.redirect('/')
@@ -55,6 +56,7 @@ class UserController {
     const rules = {
       username: 'required|alpha_numeric|unique:users',
       email: 'required|email|unique:users',
+      name: 'required|min:3',
       password: 'required|min:4',
       password_confirm: 'required|same:password',
     };
@@ -73,8 +75,10 @@ class UserController {
     const user = new User()
 
     user.username = registerData.username;
+    user.name = registerData.name
     user.email = registerData.email;
-    user.password = yield Hash.make(registerData.password) 
+    user.password = yield Hash.make(registerData.password)
+    user.coin = 50
     yield user.save()
     
     yield request.auth.login(user)
@@ -86,6 +90,52 @@ class UserController {
     yield request.auth.logout()
     response.redirect('/')
   }
-}
+
+  * users (request, response) {
+     const users = yield User.all()
+
+    for(let user of users) {
+      user = user.toJSON();
+    }
+
+    yield response.sendView('users', {
+      users: users.toJSON()
+    })  
+  }
+
+  * profile (request, response) {
+      const currentUser = request.currentUser
+      const userId = currentUser.id;
+
+      const userInfo = yield Database.from('users').select('username','email','name', 'coin').where(function(){
+          this.where('id',userId)
+      })
+      
+      yield response.sendView('profile',{
+              userInfo: userInfo
+      }) 
+      }
+
+    * addCoin (request, response) {
+      const user = yield User.find(request.currentUser.id);
+
+      user.coin += 50;
+
+      yield user.save()
+      
+      response.redirect('/')
+      }
+
+    * showUser (request, response) {
+      const id = request.param('id');
+      const userInfo = yield Database.from('users').select('username','email','name', 'coin').where(function(){
+          this.where('id',id)
+      })
+
+      yield response.sendView('profile', {
+        userInfo: userInfo
+      })
+    }
+  }
 
 module.exports = UserController

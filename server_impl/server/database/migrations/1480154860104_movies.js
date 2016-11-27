@@ -9,7 +9,9 @@ class MoviesTableSchema extends Schema {
       table.increments()
       table.string('title', 40).notNullable().unique()
       table.string('director').notNullable()
+      table.string('description').notNullable()
       table.boolean('is_rented').defaultTo(false)
+      table.integer('price')
       table.timestamps()
     })
   }

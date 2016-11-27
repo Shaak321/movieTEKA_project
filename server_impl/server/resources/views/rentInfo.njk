@@ -1,0 +1,45 @@
+{% extends 'index' %}
+
+{% block content %}
+
+<form class="form-horizontal" method="post">
+
+      {{ csrfField }}
+
+    <div class="center">
+        <div class="col-md-5 col-md-offset-1">
+
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                    Rent info
+                    </div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                        
+                        <div class="list-group">
+                                <h4 class="list-group-item-heading">Title</h4>
+                                <p class="list-group-item-text, centered">{{rentInfo[0].title}}</p>
+                                <h4 class="list-group-item-heading">Date of rent</h4>
+                                <p class="list-group-item-text, centered">{{rentInfo[0].from}}</p>
+                                <h4 class="list-group-item-heading">Date of expire</h4>
+                                <p class="list-group-item-text, centered">{{rentInfo[0].to}}</p>
+                                <h4 class="list-group-item-heading">Expired</h4>
+                                <p class="list-group-item-text, centered">{{rentInfo[0].expired}}</p>
+                        </div>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+            <button type="submit" class="btn btn-primary">Return it</button>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</form>
+
+
+{% endblock %}

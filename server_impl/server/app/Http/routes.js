@@ -17,16 +17,22 @@
 
 const Route = use('Route')
 
-Route.on('/').render('welcome')
-Route.get('/', 'MovieController.index')
-Route.get('/ownRecipes', 'MovieController.ownList').middleware('auth')
-Route.get('/recipes/create', 'MovieController.create').middleware('auth')
-Route.post('/recipes/create', 'MovieController.doCreate').middleware('auth')
-Route.get('/recipes/:id/edit', 'MovieController.edit').middleware('auth')
-Route.post('/recipes/:id/edit', 'MovieController.doEdit').middleware('auth')
-Route.get('/recipes/:id/delete', 'MovieController.doDelete').middleware('auth')
-Route.get('/recipes/:id', 'MovieController.show')
-Route.get('/search', 'MovieController.search')
+Route.get('/','MainController.main')
+
+Route.get('/createMovie', 'MovieController.create').middleware('auth')
+Route.post('/createMovie', 'MovieController.doCreate').middleware('auth')
+Route.get('/allMovies', 'MovieController.allMovies').middleware('auth')
+Route.get('/ownRents', 'MovieController.rentList').middleware('auth')
+Route.get('/rentInfo/:id', 'MovieController.rentInfo').middleware('auth')
+Route.post('/rentInfo/:id', 'MovieController.returnMovie').middleware('auth')
+Route.get('/ownProfile', 'UserController.profile')
+Route.get('/movieInfo/:id', 'MovieController.movieInfo').middleware('auth')
+Route.post('/movieInfo/:id', 'MovieController.buyMovie').middleware('auth')
+
+Route.get('/users', 'UserController.users')
+Route.get('/users/:id', 'UserController.showUser').middleware('auth')
+Route.get('/users/:id/profile', 'MovieController.showProfile').middleware('auth')
+Route.get('/addCoin', 'UserController.addCoin').middleware('auth')
 
 Route.get('/register', 'UserController.register')
 Route.get('/login', 'UserController.login')

@@ -1,0 +1,30 @@
+{% extends "layout" %}
+
+{% block content %}
+
+<h1>Movies</h1>
+
+<div class="row">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading centered">Movies</div>
+      <ul class="list-group">
+       <table style="width:100%" border="1">
+        {% for movie in movies %}
+        <ul class="list-group">
+             <div class="list-group">
+                  <tr align="center">
+                    <th class="list-group-item-text centered"><a href="/movieInfo/{{movie.id}}">{{movie.title}}</a></th>
+                    <th class="list-group-item-text centered">{{movie.director}}</th>
+                    <th class="list-group-item-text centered">{{movie.description}}</th>
+                    <th class="list-group-item-text centered">{{movie.is_rented}}</th>
+                  </tr>
+             </div>
+         </ul>
+        {% endfor %}
+        </table> 
+      </ul>
+    </div>
+
+</div>
+{% endblock %}

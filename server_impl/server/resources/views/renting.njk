@@ -1,0 +1,53 @@
+{% extends 'index' %}
+
+{% block content %}
+
+<form class="form-horizontal" method="post">
+
+      {{ csrfField }}
+
+    <div class="center">
+        <div class="col-md-5 col-md-offset-1">
+
+            <div class="panel panel-default">
+            <div class="panel-heading">
+            Personal info
+            </div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                        
+                        <div class="list-group">
+                                <h4 class="list-group-item-heading">Title</h4>
+                                <p input class="list-group-item-text, centered">{{movieInfo[0].title}}</p>
+                                <h4 class="list-group-item-heading">Director</h4>
+                                <p class="list-group-item-text, centered">{{movieInfo[0].director}}</p>
+                                <h4 class="list-group-item-heading">Description</h4>
+                                <p class="list-group-item-text, centered">{{movieInfo[0].description}}</p>
+                                <h4 class="list-group-item-heading">Price</h4>
+                                <p class="list-group-item-text, centered">{{movieInfo[0].price}}</p>
+                        </div>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+            {% if currentUser.coin < movieInfo[0].price %}
+            <button type="submit" class="btn btn-primary" disabled>Submit</button>
+            <p>You do not have enough coin, please go to work!</p>
+            {% elseif movieInfo[0].is_rented !== 'false' %}
+            <button type="submit" class="btn btn-primary" disabled>Submit</button>
+            <p>This movie is currently taken. Please wait or do "something" with the other user.</p>
+            {% else %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+            {% endif %}
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+</form>
+
+
+{% endblock %}

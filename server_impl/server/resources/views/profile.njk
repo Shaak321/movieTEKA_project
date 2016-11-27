@@ -1,0 +1,37 @@
+{% extends 'index' %}
+
+{% block content %}
+
+<div class="center">
+    <div class="col-md-5 col-md-offset-1">
+
+        <div class="panel panel-default">
+  		        <div class="panel-heading">
+                  Personal info
+                </div>
+  			  <div class="panel-body">
+                    <ul class="list-group">
+                    
+                    <div class="list-group">
+                            <h4 class="list-group-item-heading">User name</h4>
+                            <p class="list-group-item-text, centered">{{userInfo[0].username}}</p>
+                            <h4 class="list-group-item-heading">Email</h4>
+                            <p class="list-group-item-text, centered">{{userInfo[0].email}}</p>
+                            <h4 class="list-group-item-heading">Name</h4>
+                            <p class="list-group-item-text, centered">{{userInfo[0].name}}</p>
+                            <h4 class="list-group-item-heading">Currency</h4>
+                            <p class="list-group-item-text, centered">{{userInfo[0].coin}}</p>
+                    </div>
+                    </ul>
+  	          </div>
+  		</div>
+    </div>
+
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

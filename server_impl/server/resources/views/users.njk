@@ -1,0 +1,23 @@
+{% extends "layout" %}
+
+{% block content %}
+
+<h1>Users</h1>
+
+<div class="row">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading centered">Users</div>
+      <ul class="list-group">
+        {% for user in users %}
+        <ul class="list-group">
+             <div class="list-group">
+                 <p class="list-group-item-text centered"><a href="/users/{{user.id}}">{{user.username}}</a></p>
+             </div>
+         </ul>
+        {% endfor %}
+      </ul>
+    </div>
+
+</div>
+{% endblock %}

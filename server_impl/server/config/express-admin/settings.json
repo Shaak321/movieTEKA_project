@@ -83,254 +83,6 @@
             "readonly": false
         }
     },
-    "users": {
-        "slug": "users",
-        "table": {
-            "name": "users",
-            "pk": "id",
-            "verbose": "users"
-        },
-        "columns": [
-            {
-                "name": "id",
-                "verbose": "id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "username",
-                "verbose": "username",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(80)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "email",
-                "verbose": "email",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(254)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "password",
-                "verbose": "password",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(60)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "name",
-                "verbose": "name",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(255)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "created_at",
-                "verbose": "created_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "updated_at",
-                "verbose": "updated_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
-    "movies": {
-        "slug": "movies",
-        "table": {
-            "name": "movies",
-            "pk": "id",
-            "verbose": "movies"
-        },
-        "columns": [
-            {
-                "name": "id",
-                "verbose": "id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "title",
-                "verbose": "title",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(40)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "director",
-                "verbose": "director",
-                "control": {
-                    "text": true
-                },
-                "type": "varchar(255)",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "is_rented",
-                "verbose": "is_rented",
-                "control": {
-                    "text": true
-                },
-                "type": "boolean",
-                "allowNull": true,
-                "defaultValue": "'0'",
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "created_at",
-                "verbose": "created_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "updated_at",
-                "verbose": "updated_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
     "sqlite_sequence": {
         "slug": "sqlite_sequence",
         "table": {
@@ -362,206 +114,6 @@
                     "text": true
                 },
                 "type": "",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
-    "movieToRent": {
-        "slug": "movieToRent",
-        "table": {
-            "name": "movieToRent",
-            "pk": "id",
-            "verbose": "movieToRent"
-        },
-        "columns": [
-            {
-                "name": "id",
-                "verbose": "id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "movie_id",
-                "verbose": "movie_id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "rent_id",
-                "verbose": "rent_id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "created_at",
-                "verbose": "created_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "updated_at",
-                "verbose": "updated_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            }
-        ],
-        "mainview": {
-            "show": true
-        },
-        "listview": {
-            "order": {},
-            "page": 25
-        },
-        "editview": {
-            "readonly": false
-        }
-    },
-    "usersToMovies": {
-        "slug": "usersToMovies",
-        "table": {
-            "name": "usersToMovies",
-            "pk": "id",
-            "verbose": "usersToMovies"
-        },
-        "columns": [
-            {
-                "name": "id",
-                "verbose": "id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": false,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "movie_id",
-                "verbose": "movie_id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "user_id",
-                "verbose": "user_id",
-                "control": {
-                    "text": true
-                },
-                "type": "integer",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "created_at",
-                "verbose": "created_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
-                "allowNull": true,
-                "defaultValue": null,
-                "listview": {
-                    "show": true
-                },
-                "editview": {
-                    "show": true
-                }
-            },
-            {
-                "name": "updated_at",
-                "verbose": "updated_at",
-                "control": {
-                    "text": true
-                },
-                "type": "datetime",
                 "allowNull": true,
                 "defaultValue": null,
                 "listview": {
@@ -795,6 +347,566 @@
                 },
                 "type": "varchar(255)",
                 "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "movie_id",
+                "verbose": "movie_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "expired",
+                "verbose": "expired",
+                "control": {
+                    "text": true
+                },
+                "type": "boolean",
+                "allowNull": true,
+                "defaultValue": "'0'",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "movies": {
+        "slug": "movies",
+        "table": {
+            "name": "movies",
+            "pk": "id",
+            "verbose": "movies"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "title",
+                "verbose": "title",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(40)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "director",
+                "verbose": "director",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "is_rented",
+                "verbose": "is_rented",
+                "control": {
+                    "text": true
+                },
+                "type": "boolean",
+                "allowNull": true,
+                "defaultValue": "'0'",
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "description",
+                "verbose": "description",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "price",
+                "verbose": "price",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "movieToRent": {
+        "slug": "movieToRent",
+        "table": {
+            "name": "movieToRent",
+            "pk": "id",
+            "verbose": "movieToRent"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "movie_id",
+                "verbose": "movie_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "rent_id",
+                "verbose": "rent_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "usersToMovies": {
+        "slug": "usersToMovies",
+        "table": {
+            "name": "usersToMovies",
+            "pk": "id",
+            "verbose": "usersToMovies"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "movie_id",
+                "verbose": "movie_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "user_id",
+                "verbose": "user_id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "price",
+                "verbose": "price",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "created_at",
+                "verbose": "created_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "updated_at",
+                "verbose": "updated_at",
+                "control": {
+                    "text": true
+                },
+                "type": "datetime",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            }
+        ],
+        "mainview": {
+            "show": true
+        },
+        "listview": {
+            "order": {},
+            "page": 25
+        },
+        "editview": {
+            "readonly": false
+        }
+    },
+    "users": {
+        "slug": "users",
+        "table": {
+            "name": "users",
+            "pk": "id",
+            "verbose": "users"
+        },
+        "columns": [
+            {
+                "name": "id",
+                "verbose": "id",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "username",
+                "verbose": "username",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(80)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "email",
+                "verbose": "email",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(254)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "password",
+                "verbose": "password",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(60)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "name",
+                "verbose": "name",
+                "control": {
+                    "text": true
+                },
+                "type": "varchar(255)",
+                "allowNull": false,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "coin",
+                "verbose": "coin",
+                "control": {
+                    "text": true
+                },
+                "type": "integer",
+                "allowNull": true,
                 "defaultValue": null,
                 "listview": {
                     "show": true
