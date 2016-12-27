@@ -32,6 +32,7 @@
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
+            {% if currentUser.username != 'admin' %}
                 {% if currentUser.coin < movieInfo[0].price %}
                 <button type="submit" class="btn btn-primary" disabled>Rent</button>
                 <p>You do not have enough coin, please go to work!</p>
@@ -41,6 +42,7 @@
                 {% else %}
                 <button type="submit" class="btn btn-primary">Rent</button>
                 {% endif %}
+            {% endif %}
             </div>
         </div>
 

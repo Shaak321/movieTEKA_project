@@ -7,20 +7,15 @@
     Registration
 	*	When you register you have to give a non-existing username and password which is at least 6 character long.
     
-	Managing your account
-		Edit your personal information:
-		*	Name
-		*	Phone number
-		*	Home
-		*	Birth date
-		*	Change password
 	Buy new movies
-	*	Rent new movies from the website by giving the days of how long you want to keep it
-	Manage your movies
-	*	Offer your movies to rent to your friend(s)
-	Rate and comment movies
-	*	Write opinion about movies to help others decide to watch it or not
-	*	Rate the movie
+	*	Rent new movies from the website managing by the administrator
+	*	When you do not need the movie anymore just return it, so others can rent it
+	*	You can check some information about the movie like who were the directors, what's the movie about and more
+	
+	Currency
+	*	Use the "Add coin" function to get more money for movies
 
+	Admin functions
+	*	As admin movies can be added and/or deleted
 
 ###There is a global administrator on the website who can add movie to the database and make it buyable for everyone.

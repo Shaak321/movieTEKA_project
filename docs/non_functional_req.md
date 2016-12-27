@@ -9,4 +9,3 @@
 	*	The webpage should be online around 99% of the year.
 	Security
 	*	Passwords will be encoded with SHA256
-	*	All possible errorr will be catched
