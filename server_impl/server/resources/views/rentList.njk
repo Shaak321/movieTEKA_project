@@ -6,6 +6,8 @@
 
 <div class="row">
 
+    {{ csrfField }}
+
     <div class="panel panel-primary">
       <div class="panel-heading centered">Rents</div>
       <ul class="list-group">
@@ -19,6 +21,7 @@
                     <th class="list-group-item-text centered">{{rent.from}}</th>
                     <th class="list-group-item-text centered">{{rent.to}}</th>
                     <th class="list-group-item-text centered">{{rent.expired}}</th>
+                    <th class="list-group-item-text centered"><a href="/rentInfo/return/{{rent.id}}" id="return" class="btn btn-primary">Return it</a></th>
                   </tr>
              </div>
          </ul>

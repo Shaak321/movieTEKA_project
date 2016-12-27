@@ -37,7 +37,7 @@ class MovieController {
 
        const movie = yield Movie.create(movieInfo)
 
-       response.redirect('/ownMovies')
+       response.redirect('/allMovies')
    }
 
    * allMovies (request, response) {
@@ -85,39 +85,25 @@ class MovieController {
        response.redirect('/ownRents')
    }
 
-   * rentList (request, response) {
-        const id = request.currentUser.id;
-        const rentList = yield Database.from('rents').select('id', 'title','from','to', 'expired').where(function(){
-            this.where('user_id',id)
-        })
-    
-        yield response.sendView('rentList', {
-            rentList: rentList
-        })
-   } 
+   *delete(request,response){
+        const movieId = request.param('id')
+        const movie = yield Movie.find(movieId)
 
-   * rentInfo (request, response) {
-        const id = request.param('id');
-        const rentInfo = yield Database.from('rents').select('title','from','to', 'expired').where(function(){
-            this.where('id',id)
-        })
-    
-        yield response.sendView('rentInfo', {
-            rentInfo: rentInfo
-        })
+        yield movie.delete()
+        response.redirect('/allMovies')
+    }
+
+   *ajaxDelete(request,response){
+        const movieId = request.param('id')
+        const movie = yield Movie.find(movieId)
+
+        if(movie != null) {
+            response.ok({success: true})
+        }
+        else{
+            response.ok({success: false})
+        }
+    }
    }
-   
-   * returnMovie (request, response) {
-        const id = request.param('id');
-        const rent = yield Rent.find(id)
-        const movie = yield Movie.find(rent.movie_id)
-        movie.is_rented = 'false'
-        yield movie.save()
-
-        yield rent.delete()
-    
-        response.redirect('/ownRents')
-   } 
-}
 
 module.exports = MovieController

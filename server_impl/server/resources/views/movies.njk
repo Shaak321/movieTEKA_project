@@ -6,6 +6,8 @@
 
 <div class="row">
 
+    {{ csrfField }}
+
     <div class="panel panel-primary">
       <div class="panel-heading centered">Movies</div>
       <ul class="list-group">
@@ -17,7 +19,17 @@
                     <th class="list-group-item-text centered"><a href="/movieInfo/{{movie.id}}">{{movie.title}}</a></th>
                     <th class="list-group-item-text centered">{{movie.director}}</th>
                     <th class="list-group-item-text centered">{{movie.description}}</th>
-                    <th class="list-group-item-text centered">{{movie.is_rented}}</th>
+                    {% if movie.is_rented == 'true' %}
+                        <th class="list-group-item-text centered">Already owned</th>
+                        {% if currentUser.username == 'admin'%}
+                          <th class="list-group-item-text centered"></th>
+                        {% endif %}
+                    {% else %}
+                        <th class="list-group-item-text centered">Not owned yet</th>
+                        {% if currentUser.username == 'admin'%}
+                          <th class="list-group-item-text centered"><a id="delete" class="btn btn-primary" href="/delete/{{movie.id}}">Delete</a></th>
+                        {% endif %}
+                    {% endif %}
                   </tr>
              </div>
          </ul>

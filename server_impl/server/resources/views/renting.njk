@@ -32,15 +32,15 @@
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-            {% if currentUser.coin < movieInfo[0].price %}
-            <button type="submit" class="btn btn-primary" disabled>Submit</button>
-            <p>You do not have enough coin, please go to work!</p>
-            {% elseif movieInfo[0].is_rented !== 'false' %}
-            <button type="submit" class="btn btn-primary" disabled>Submit</button>
-            <p>This movie is currently taken. Please wait or do "something" with the other user.</p>
-            {% else %}
-            <button type="submit" class="btn btn-primary">Submit</button>
-            {% endif %}
+                {% if currentUser.coin < movieInfo[0].price %}
+                <button type="submit" class="btn btn-primary" disabled>Rent</button>
+                <p>You do not have enough coin, please go to work!</p>
+                {% elseif movieInfo[0].is_rented !== 'false' %}
+                <button type="submit" class="btn btn-primary" disabled>Rent</button>
+                <p>This movie is currently taken. Please wait or do "something" with the other user.</p>
+                {% else %}
+                <button type="submit" class="btn btn-primary">Rent</button>
+                {% endif %}
             </div>
         </div>
 

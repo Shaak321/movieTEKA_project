@@ -12,7 +12,11 @@
         {% for user in users %}
         <ul class="list-group">
              <div class="list-group">
-                 <p class="list-group-item-text centered"><a href="/users/{{user.id}}">{{user.username}}</a></p>
+                {% if currentUser %}
+                <p class="list-group-item-text centered"><a href="/users/{{user.id}}">{{user.username}}</a></p>
+                {% else %}
+                <p class="list-group-item-text centered">{{user.username}}</p>
+                {% endif %}
              </div>
          </ul>
         {% endfor %}
