@@ -9,3 +9,6 @@
 	*	The webpage should be online around 99% of the year.
 	Security
 	*	Passwords will be encoded with SHA256
+	*	Illegal arguments are catched
+	*	Can not create existing users
+	*	Important features are available for registered users only

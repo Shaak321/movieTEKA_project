@@ -1,0 +1,424 @@
+\---movieTEKA_project-master
+    +---docs
+    |   \---design
+    +---server_impl
+    |   +---node_modules
+    |   |   +---.bin
+    |   |   |   \---server
+    |   |   |       +---app
+    |   |   |       |   +---Commands
+    |   |   |       |   +---Http
+    |   |   |       |   |   +---Controllers
+    |   |   |       |   |   \---Middleware
+    |   |   |       |   +---Listeners
+    |   |   |       |   \---Model
+    |   |   |       |       \---Hooks
+    |   |   |       +---bootstrap
+    |   |   |       +---config
+    |   |   |       +---database
+    |   |   |       |   +---migrations
+    |   |   |       |   \---seeds
+    |   |   |       +---providers
+    |   |   |       +---public
+    |   |   |       |   \---assets
+    |   |   |       +---resources
+    |   |   |       |   \---views
+    |   |   |       |       \---errors
+    |   |   |       \---storage
+    |   |   +---adonis-cli
+    |   |   |   +---lib
+    |   |   |   \---src
+    |   |   |       \---Commands
+    |   |   +---ansi-regex
+    |   |   +---array-uniq
+    |   |   +---balanced-match
+    |   |   +---brace-expansion
+    |   |   +---camelcase
+    |   |   +---cli-spinner
+    |   |   |   +---example
+    |   |   |   \---img
+    |   |   +---cliui
+    |   |   +---code-point-at
+    |   |   +---colors
+    |   |   |   +---examples
+    |   |   |   +---lib
+    |   |   |   |   +---custom
+    |   |   |   |   +---maps
+    |   |   |   |   \---system
+    |   |   |   \---themes
+    |   |   +---concat-map
+    |   |   |   +---example
+    |   |   |   \---test
+    |   |   +---decamelize
+    |   |   +---dotenv
+    |   |   |   +---lib
+    |   |   |   \---test
+    |   |   +---fs.realpath
+    |   |   +---glob
+    |   |   +---inflight
+    |   |   +---inherits
+    |   |   +---invert-kv
+    |   |   +---is-fullwidth-code-point
+    |   |   +---lcid
+    |   |   +---minimatch
+    |   |   +---nan
+    |   |   |   +---doc
+    |   |   |   \---tools
+    |   |   +---number-is-nan
+    |   |   +---once
+    |   |   +---os-locale
+    |   |   +---path-is-absolute
+    |   |   +---randomstring
+    |   |   |   +---bin
+    |   |   |   +---examples
+    |   |   |   +---lib
+    |   |   |   \---test
+    |   |   +---rimraf
+    |   |   +---semver
+    |   |   |   \---bin
+    |   |   +---shelljs
+    |   |   |   +---bin
+    |   |   |   +---scripts
+    |   |   |   \---src
+    |   |   +---sqlite3
+    |   |   |   +---deps
+    |   |   |   +---lib
+    |   |   |   |   \---binding
+    |   |   |   |       \---node-v48-win32-x64
+    |   |   |   +---node_modules
+    |   |   |   |   +---.bin
+    |   |   |   |   \---node-pre-gyp
+    |   |   |   |       +---bin
+    |   |   |   |       +---lib
+    |   |   |   |       |   \---util
+    |   |   |   |       |       \---nw-pre-gyp
+    |   |   |   |       \---node_modules
+    |   |   |   |           +---.bin
+    |   |   |   |           +---mkdirp
+    |   |   |   |           |   +---bin
+    |   |   |   |           |   +---examples
+    |   |   |   |           |   +---node_modules
+    |   |   |   |           |   |   \---minimist
+    |   |   |   |           |   |       +---example
+    |   |   |   |           |   |       \---test
+    |   |   |   |           |   \---test
+    |   |   |   |           +---nopt
+    |   |   |   |           |   +---bin
+    |   |   |   |           |   +---examples
+    |   |   |   |           |   +---lib
+    |   |   |   |           |   +---node_modules
+    |   |   |   |           |   |   \---abbrev
+    |   |   |   |           |   \---test
+    |   |   |   |           +---npmlog
+    |   |   |   |           |   \---node_modules
+    |   |   |   |           |       +---are-we-there-yet
+    |   |   |   |           |       |   +---node_modules
+    |   |   |   |           |       |   |   +---delegates
+    |   |   |   |           |       |   |   |   \---test
+    |   |   |   |           |       |   |   \---readable-stream
+    |   |   |   |           |       |   |       +---doc
+    |   |   |   |           |       |   |       |   \---wg-meetings
+    |   |   |   |           |       |   |       +---lib
+    |   |   |   |           |       |   |       |   \---internal
+    |   |   |   |           |       |   |       |       \---streams
+    |   |   |   |           |       |   |       \---node_modules
+    |   |   |   |           |       |   |           +---buffer-shims
+    |   |   |   |           |       |   |           +---core-util-is
+    |   |   |   |           |       |   |           |   \---lib
+    |   |   |   |           |       |   |           +---inherits
+    |   |   |   |           |       |   |           +---isarray
+    |   |   |   |           |       |   |           +---process-nextick-args
+    |   |   |   |           |       |   |           +---string_decoder
+    |   |   |   |           |       |   |           \---util-deprecate
+    |   |   |   |           |       |   \---test
+    |   |   |   |           |       |       \---lib
+    |   |   |   |           |       +---console-control-strings
+    |   |   |   |           |       +---gauge
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       +---aproba
+    |   |   |   |           |       |       +---has-color
+    |   |   |   |           |       |       +---has-unicode
+    |   |   |   |           |       |       +---object-assign
+    |   |   |   |           |       |       +---signal-exit
+    |   |   |   |           |       |       +---string-width
+    |   |   |   |           |       |       |   \---node_modules
+    |   |   |   |           |       |       |       +---code-point-at
+    |   |   |   |           |       |       |       |   \---node_modules
+    |   |   |   |           |       |       |       |       \---number-is-nan
+    |   |   |   |           |       |       |       \---is-fullwidth-code-point
+    |   |   |   |           |       |       |           \---node_modules
+    |   |   |   |           |       |       +---strip-ansi
+    |   |   |   |           |       |       |   \---node_modules
+    |   |   |   |           |       |       |       \---ansi-regex
+    |   |   |   |           |       |       \---wide-align
+    |   |   |   |           |       |           \---test
+    |   |   |   |           |       \---set-blocking
+    |   |   |   |           +---rc
+    |   |   |   |           |   +---lib
+    |   |   |   |           |   +---node_modules
+    |   |   |   |           |   |   +---.bin
+    |   |   |   |           |   |   +---deep-extend
+    |   |   |   |           |   |   |   \---lib
+    |   |   |   |           |   |   +---ini
+    |   |   |   |           |   |   +---minimist
+    |   |   |   |           |   |   |   +---example
+    |   |   |   |           |   |   |   \---test
+    |   |   |   |           |   |   \---strip-json-comments
+    |   |   |   |           |   \---test
+    |   |   |   |           +---request
+    |   |   |   |           |   +---lib
+    |   |   |   |           |   \---node_modules
+    |   |   |   |           |       +---.bin
+    |   |   |   |           |       +---aws-sign2
+    |   |   |   |           |       +---aws4
+    |   |   |   |           |       +---caseless
+    |   |   |   |           |       +---combined-stream
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       \---delayed-stream
+    |   |   |   |           |       |           \---lib
+    |   |   |   |           |       +---extend
+    |   |   |   |           |       +---forever-agent
+    |   |   |   |           |       +---form-data
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       \---asynckit
+    |   |   |   |           |       |           \---lib
+    |   |   |   |           |       +---har-validator
+    |   |   |   |           |       |   +---bin
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   |   \---schemas
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       +---chalk
+    |   |   |   |           |       |       |   \---node_modules
+    |   |   |   |           |       |       |       +---ansi-styles
+    |   |   |   |           |       |       |       +---escape-string-regexp
+    |   |   |   |           |       |       |       +---has-ansi
+    |   |   |   |           |       |       |       |   \---node_modules
+    |   |   |   |           |       |       |       |       \---ansi-regex
+    |   |   |   |           |       |       |       +---strip-ansi
+    |   |   |   |           |       |       |       |   \---node_modules
+    |   |   |   |           |       |       |       |       \---ansi-regex
+    |   |   |   |           |       |       |       \---supports-color
+    |   |   |   |           |       |       +---commander
+    |   |   |   |           |       |       |   \---node_modules
+    |   |   |   |           |       |       |       \---graceful-readlink
+    |   |   |   |           |       |       +---is-my-json-valid
+    |   |   |   |           |       |       |   +---node_modules
+    |   |   |   |           |       |       |   |   +---generate-function
+    |   |   |   |           |       |       |   |   +---generate-object-property
+    |   |   |   |           |       |       |   |   +---jsonpointer
+    |   |   |   |           |       |       |   |   \---xtend
+    |   |   |   |           |       |       |   \---test
+    |   |   |   |           |       |       |       +---fixtures
+    |   |   |   |           |       |       |       \---json-schema-draft4
+    |   |   |   |           |       |       \---pinkie-promise
+    |   |   |   |           |       |           \---node_modules
+    |   |   |   |           |       |               \---pinkie
+    |   |   |   |           |       +---hawk
+    |   |   |   |           |       |   +---dist
+    |   |   |   |           |       |   +---example
+    |   |   |   |           |       |   +---images
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   +---node_modules
+    |   |   |   |           |       |   |   +---boom
+    |   |   |   |           |       |   |   |   +---images
+    |   |   |   |           |       |   |   |   +---lib
+    |   |   |   |           |       |   |   |   \---test
+    |   |   |   |           |       |   |   +---cryptiles
+    |   |   |   |           |       |   |   |   +---lib
+    |   |   |   |           |       |   |   |   \---test
+    |   |   |   |           |       |   |   +---hoek
+    |   |   |   |           |       |   |   |   +---images
+    |   |   |   |           |       |   |   |   +---lib
+    |   |   |   |           |       |   |   |   \---test
+    |   |   |   |           |       |   |   |       \---modules
+    |   |   |   |           |       |   |   \---sntp
+    |   |   |   |           |       |   |       +---examples
+    |   |   |   |           |       |   |       +---lib
+    |   |   |   |           |       |   |       \---test
+    |   |   |   |           |       |   \---test
+    |   |   |   |           |       +---http-signature
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       +---.bin
+    |   |   |   |           |       |       +---assert-plus
+    |   |   |   |           |       |       +---jsprim
+    |   |   |   |           |       |       |   +---lib
+    |   |   |   |           |       |       |   \---node_modules
+    |   |   |   |           |       |       |       +---extsprintf
+    |   |   |   |           |       |       |       |   +---examples
+    |   |   |   |           |       |       |       |   \---lib
+    |   |   |   |           |       |       |       +---json-schema
+    |   |   |   |           |       |       |       |   +---draft-00
+    |   |   |   |           |       |       |       |   +---draft-01
+    |   |   |   |           |       |       |       |   +---draft-02
+    |   |   |   |           |       |       |       |   +---draft-03
+    |   |   |   |           |       |       |       |   |   \---examples
+    |   |   |   |           |       |       |       |   +---draft-04
+    |   |   |   |           |       |       |       |   +---lib
+    |   |   |   |           |       |       |       |   \---test
+    |   |   |   |           |       |       |       \---verror
+    |   |   |   |           |       |       |           +---examples
+    |   |   |   |           |       |       |           +---lib
+    |   |   |   |           |       |       |           \---tests
+    |   |   |   |           |       |       \---sshpk
+    |   |   |   |           |       |           +---bin
+    |   |   |   |           |       |           +---lib
+    |   |   |   |           |       |           |   \---formats
+    |   |   |   |           |       |           +---man
+    |   |   |   |           |       |           |   \---man1
+    |   |   |   |           |       |           \---node_modules
+    |   |   |   |           |       |               +---asn1
+    |   |   |   |           |       |               |   +---lib
+    |   |   |   |           |       |               |   |   \---ber
+    |   |   |   |           |       |               |   \---tst
+    |   |   |   |           |       |               |       \---ber
+    |   |   |   |           |       |               +---assert-plus
+    |   |   |   |           |       |               +---bcrypt-pbkdf
+    |   |   |   |           |       |               +---dashdash
+    |   |   |   |           |       |               |   +---etc
+    |   |   |   |           |       |               |   \---lib
+    |   |   |   |           |       |               +---ecc-jsbn
+    |   |   |   |           |       |               |   \---lib
+    |   |   |   |           |       |               +---getpass
+    |   |   |   |           |       |               |   \---lib
+    |   |   |   |           |       |               +---jodid25519
+    |   |   |   |           |       |               |   \---lib
+    |   |   |   |           |       |               +---jsbn
+    |   |   |   |           |       |               \---tweetnacl
+    |   |   |   |           |       +---is-typedarray
+    |   |   |   |           |       +---isstream
+    |   |   |   |           |       +---json-stringify-safe
+    |   |   |   |           |       |   \---test
+    |   |   |   |           |       +---mime-types
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       \---mime-db
+    |   |   |   |           |       +---node-uuid
+    |   |   |   |           |       |   +---benchmark
+    |   |   |   |           |       |   +---bin
+    |   |   |   |           |       |   \---test
+    |   |   |   |           |       +---oauth-sign
+    |   |   |   |           |       +---qs
+    |   |   |   |           |       |   +---dist
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   \---test
+    |   |   |   |           |       +---stringstream
+    |   |   |   |           |       +---tough-cookie
+    |   |   |   |           |       |   +---lib
+    |   |   |   |           |       |   \---node_modules
+    |   |   |   |           |       |       \---punycode
+    |   |   |   |           |       \---tunnel-agent
+    |   |   |   |           +---rimraf
+    |   |   |   |           |   \---node_modules
+    |   |   |   |           |       \---glob
+    |   |   |   |           |           \---node_modules
+    |   |   |   |           |               +---fs.realpath
+    |   |   |   |           |               +---inflight
+    |   |   |   |           |               |   \---node_modules
+    |   |   |   |           |               |       \---wrappy
+    |   |   |   |           |               +---inherits
+    |   |   |   |           |               +---minimatch
+    |   |   |   |           |               |   \---node_modules
+    |   |   |   |           |               |       \---brace-expansion
+    |   |   |   |           |               |           \---node_modules
+    |   |   |   |           |               |               +---balanced-match
+    |   |   |   |           |               |               \---concat-map
+    |   |   |   |           |               |                   \---test
+    |   |   |   |           |               +---once
+    |   |   |   |           |               |   \---node_modules
+    |   |   |   |           |               |       \---wrappy
+    |   |   |   |           |               \---path-is-absolute
+    |   |   |   |           +---semver
+    |   |   |   |           |   \---bin
+    |   |   |   |           +---tar
+    |   |   |   |           |   +---examples
+    |   |   |   |           |   +---lib
+    |   |   |   |           |   +---node_modules
+    |   |   |   |           |   |   +---block-stream
+    |   |   |   |           |   |   +---fstream
+    |   |   |   |           |   |   |   +---examples
+    |   |   |   |           |   |   |   +---lib
+    |   |   |   |           |   |   |   \---node_modules
+    |   |   |   |           |   |   |       \---graceful-fs
+    |   |   |   |           |   |   \---inherits
+    |   |   |   |           |   \---test
+    |   |   |   |           \---tar-pack
+    |   |   |   |               +---node_modules
+    |   |   |   |               |   +---debug
+    |   |   |   |               |   |   \---node_modules
+    |   |   |   |               |   |       \---ms
+    |   |   |   |               |   +---fstream
+    |   |   |   |               |   |   +---examples
+    |   |   |   |               |   |   +---lib
+    |   |   |   |               |   |   \---node_modules
+    |   |   |   |               |   |       +---graceful-fs
+    |   |   |   |               |   |       \---inherits
+    |   |   |   |               |   +---fstream-ignore
+    |   |   |   |               |   |   \---node_modules
+    |   |   |   |               |   |       +---inherits
+    |   |   |   |               |   |       \---minimatch
+    |   |   |   |               |   |           \---node_modules
+    |   |   |   |               |   |               \---brace-expansion
+    |   |   |   |               |   |                   \---node_modules
+    |   |   |   |               |   +---once
+    |   |   |   |               |   |   \---node_modules
+    |   |   |   |               |   |       \---wrappy
+    |   |   |   |               |   +---readable-stream
+    |   |   |   |               |   |   +---doc
+    |   |   |   |               |   |   |   \---wg-meetings
+    |   |   |   |               |   |   +---lib
+    |   |   |   |               |   |   |   \---internal
+    |   |   |   |               |   |   |       \---streams
+    |   |   |   |               |   |   \---node_modules
+    |   |   |   |               |   |       +---buffer-shims
+    |   |   |   |               |   |       +---core-util-is
+    |   |   |   |               |   |       |   \---lib
+    |   |   |   |               |   |       +---inherits
+    |   |   |   |               |   |       +---isarray
+    |   |   |   |               |   |       +---process-nextick-args
+    |   |   |   |               |   |       +---string_decoder
+    |   |   |   |               |   |       \---util-deprecate
+    |   |   |   |               |   \---uid-number
+    |   |   |   |               \---test
+    |   |   |   |                   \---fixtures
+    |   |   |   |                       \---to-pack
+    |   |   |   \---src
+    |   |   +---string-width
+    |   |   +---strip-ansi
+    |   |   +---window-size
+    |   |   +---wrap-ansi
+    |   |   +---wrappy
+    |   |   +---y18n
+    |   |   \---yargs
+    |   |       +---lib
+    |   |       \---locales
+    |   \---server
+    |       +---app
+    |       |   +---Commands
+    |       |   +---Http
+    |       |   |   +---Controllers
+    |       |   |   \---Middleware
+    |       |   +---Listeners
+    |       |   \---Model
+    |       |       \---Hooks
+    |       +---bootstrap
+    |       +---config
+    |       |   \---express-admin
+    |       +---database
+    |       |   +---migrations
+    |       |   \---seeds
+    |       +---providers
+    |       +---public
+    |       |   +---assets
+    |       |   \---scripts
+    |       +---resources
+    |       |   \---views
+    |       |       \---errors
+    |       \---storage
+    \---test
+        +---admin login
+        +---new movie create
+        +---register and login
+        +---rent new movie
+        \---return rented movie
