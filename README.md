@@ -9,7 +9,7 @@
     * [Functional](docs/functional_req.md)
     * [Non-functional](docs/non_functional_req.md)
   * Implementation
-	* [Directory map](docs/directory_map.md)
+	* [Directory map](docs/directory_map.txt)
   * Design
 	* [Database](docs/UML.jpg)
 	* [End points](docs/endpoints.md)
